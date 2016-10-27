@@ -10,4 +10,14 @@ const fetchAllPokemon = success => {
   );
 };
 
-export default fetchAllPokemon;
+const fetchPokemon = (id, success) => {
+  $.ajax(
+    {
+      method: 'GET',
+      url: `api/pokemon/${id}`,
+      success
+    }
+  );
+};
+
+export {fetchAllPokemon, fetchPokemon};
