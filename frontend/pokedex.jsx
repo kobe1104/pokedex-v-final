@@ -8,6 +8,7 @@ import { selectAllPokemon } from './reducers/selectors';
 import Root from './components/root_component';
 import { Router, Route, IndexRoute, hashHistory, withRouter } from 'react-router';
 
+
 document.addEventListener('DOMContentLoaded', () => {
     window.receiveAllPokemon = receiveAllPokemon;
     window.requestAllPokemon = requestAllPokemon;
@@ -19,5 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     ReactDOM.render(<Root store={store}/>, rootEl);
     store.dispatch(requestAllPokemon());
 
+    window.store = store;
 
 });

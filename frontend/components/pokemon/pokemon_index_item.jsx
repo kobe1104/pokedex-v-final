@@ -1,9 +1,8 @@
 import React from 'react';
-
-
+import { Router, Route, IndexRoute, hashHistory, withRouter } from 'react-router';
 
 const PokemonIndexItem = (props) => {
-
+  
   const handleClick = url => e => props.router.push(url);
 
   return (
@@ -16,4 +15,4 @@ const PokemonIndexItem = (props) => {
   );
 };
 
-export default PokemonIndexItem;
+export default withRouter(PokemonIndexItem);

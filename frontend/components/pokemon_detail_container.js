@@ -5,7 +5,7 @@ import { receivePokemon, requestPokemon } from "../actions/pokemon_actions";
 
 
 const mapStateToProps = state => ({
-  pokemonDetail: selectPokemon(state)
+  pokemonDetail: state.pokemonDetail
 });
 
 const mapDispatchToProps = dispatch => ({
